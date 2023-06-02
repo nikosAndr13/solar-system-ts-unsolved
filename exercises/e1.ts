@@ -2,25 +2,9 @@
 // Return an array of all Planets' names
 // Return example: ['name1', 'name2', ... , 'nameN']
 
-export interface planet {
-  name: string;
-  id: string;
-  isPlanet: boolean;
-  mass: {
-    massValue: number;
-    massExponent: number;
-  };
-  vol: {
-    volValue: number;
-    volExponent: number;
-  };
-  gravity: number;
-  avgTemp: number;
-  moonsCount: number;
-  moons: string[];
-}
+import { Planet } from "../data/data"
 
-export function getPlanetNames(planets: planet[]): string[] {
+export function getPlanetNames(planets: Planet[]): string[] {
   return planets.map((planet => planet?.name))
 }
 

@@ -3,10 +3,10 @@
 // Return example: ['name1', 'name2', ... , 'nameN']
 // Note: This input should be destructured from the function parameter
 
-import { planet } from "./e1";
+import { Planet } from "../data/data";
 
-export function getPlanetNamesWithMassValue({ planets, greaterThanOrEqualTo, }: { planets: planet[], greaterThanOrEqualTo: number }): string[] {
-  return planets.reduce((acc: string[], planet: planet) => {
+export function getPlanetNamesWithMassValue({ planets, greaterThanOrEqualTo, }: { planets: Planet[], greaterThanOrEqualTo: number }): string[] {
+  return planets.reduce((acc: string[], planet: Planet) => {
     if (planet.mass.massValue >= greaterThanOrEqualTo) {
       acc.push(planet.name)
     }

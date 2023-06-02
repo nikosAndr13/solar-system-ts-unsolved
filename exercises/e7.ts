@@ -1,7 +1,7 @@
 // SPACE DATA EXERCISE 7
 // Return an array of all Planets names that have moons
-import { planet } from "./e1";
-export function getPlanetsWithMoons(planets: planet[]): string[] {
+import { Planet } from "../data/data"
+export function getPlanetsWithMoons(planets: Planet[]): string[] {
   return planets.filter(planet => {
     return (planet.moons !== undefined)
   }).map(planet => planet.name)

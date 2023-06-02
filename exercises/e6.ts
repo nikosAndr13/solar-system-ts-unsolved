@@ -1,10 +1,9 @@
 // SPACE DATA EXERCISE 6
 // Return an array with all asteroids discovered after a given year
 
-import { asteroid } from "./e2";
-
-export function getAsteroidsDiscoveredAfterYear(asteroids: asteroid[], year: number) {
-  return asteroids.reduce((acc: asteroid[], asteroid: asteroid) => {
+import { Asteroid } from "../data/data";
+export function getAsteroidsDiscoveredAfterYear(asteroids: Asteroid[], year: number) {
+  return asteroids.reduce((acc: Asteroid[], asteroid: Asteroid) => {
     if (asteroid.discoveryYear > year) {
       acc.push(asteroid)
     }

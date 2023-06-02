@@ -2,9 +2,9 @@
 // Return an array of all Planets' average temperatures
 // Return example: [1, 2, ... , N]
 
-import { planet } from "./e1";
+import { Planet } from "../data/data"
 
-export function getAllAverageTemperatures(planets: planet[]) {
+export function getAllAverageTemperatures(planets: Planet[]) {
   return planets.map(planet => planet.avgTemp)
 }
 

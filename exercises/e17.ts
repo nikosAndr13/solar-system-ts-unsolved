@@ -1,4 +1,9 @@
-export const minBy = (array: [], cb: (element: object) => {}) => {
+type Person = {
+  name: string;
+  age: number;
+};
+
+export const minBy = <T>(array: T[], cb: (person: T) => number | string) => {
   if (array.length === 0) { return undefined };
   return array.reduce((lowestObj, currentObj) => {
     if (cb(currentObj) < cb(lowestObj)) {
@@ -7,7 +12,7 @@ export const minBy = (array: [], cb: (element: object) => {}) => {
   })
 };
 
-export function maxBy(array: [], cb: (element: object) => {}) {
+export function maxBy<T>(array: T[], cb: (element: T) => number | string) {
   if (array.length === 0) { return undefined };
   return array.reduce((highestObj, currentObj) => {
     if (cb(currentObj) > cb(highestObj)) {
